@@ -3,12 +3,21 @@
   <head>
     <title>Simaccount</title>
     <%= csrf_meta_tags %>
-
+	<link href="https://fonts.googleapis.com/css?family=Dosis|Open+Sans:300,400,600" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  	<div class="navbar-header navbar-color">
+  		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  	</button>
+  		<a class="navbar-brand navcolor" href="/">Simple Accounting</a>
+	</div>
     <%= yield %>
   </body>
 </html>
