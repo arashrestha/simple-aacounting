@@ -1,0 +1,19 @@
+
+
+
+<table style="width:100%">
+  <tr>
+    <th>Data</th>
+    <th>Title</th> 
+    <th>Amount</th>
+  </tr>
+
+  <% @sims.each do |sim| %>
+  <tr>
+	 <td><%= sim.date %></td>
+	 <td><%= sim.title %></td>
+	 <td><%= sim.amount %></td>
+ </tr>
+<% end %>
+
+</table>
