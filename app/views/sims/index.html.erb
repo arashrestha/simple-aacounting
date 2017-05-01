@@ -1,19 +1,31 @@
 
 
-
-<table style="width:100%">
+<table style="width:60%">
   <tr>
     <th>Data</th>
-    <th>Title</th> 
+    <th>Title</th>
     <th>Amount</th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% @sims.each do |sim| %>
-  <tr>
-	 <td><%= sim.date %></td>
-	 <td><%= sim.title %></td>
-	 <td><%= sim.amount %></td>
- </tr>
+  			<tr>
+ 				<td><%= sim.date %></td>
+	 			<td><%= sim.title %></td>
+				<td><%= sim.amount %></td>
+				<td></td>
+				<td></td>
+	 		</tr>
+	
 <% end %>
 
 </table>
+
+
+<%= simple_form_for Sim.new do |f| %>
+  <%= f.input :date %>
+  <%= f.input :title %>
+  <%= f.input :amount %>
+  <%= f.submit 'Create Record', class: 'btn btn-primary ' %>
+<% end %>
