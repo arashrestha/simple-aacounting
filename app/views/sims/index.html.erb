@@ -14,8 +14,8 @@
  				<td><%= sim.date %></td>
 	 			<td><%= sim.title %></td>
 				<td><%= sim.amount %></td>
-				<td></td>
-				<td></td>
+				<td><%= link_to 'Edit', edit_sim_path(sim), class: 'btn btn-primary'%></td>
+				<td><%= link_to 'Delete', sim_path(sim), method: :delete, class: 'btn btn-danger', data: {confirm: "Are you sure?"} %></td>
 	 		</tr>
 	
 <% end %>

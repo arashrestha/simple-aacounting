@@ -5,12 +5,17 @@ class SimsController < ApplicationController
 
 	def create
 		@sim = Sim.create(sim_params)
+		if @sim.vald?
+			#
+		else
+			#
+		end
 		redirect_to root_path
 	end
 
 	
 	def edit
-		@idea = Sim.find(params[: id])
+		@sim = Sim.find(params[:id])
 	end
 
 	def update
@@ -21,6 +26,12 @@ class SimsController < ApplicationController
 		   redirect_to edit_sim_path(params[:id])
 		end
     end
+
+    def destroy
+	  @sim = Sim.find(params[:id])
+	  @sim.destroy
+	  redirect_to root_path
+	end
 
 	def new
 	end
