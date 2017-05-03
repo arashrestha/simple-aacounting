@@ -9,11 +9,12 @@
   </head>
 
   <body>
-  	<div id= "wrap">
-  	<%= render 'shared/nav' %>
-	<div class="container">
-    	<%= yield %>
-    </div>
+    <div id= "wrap">
+      <%= render 'shared/nav' %>
+        <div class="container">
+          <%= render 'shared/flash_messages' %>
+              <%= yield %> 
+        </div>
     </div>
   </body>
 </html>

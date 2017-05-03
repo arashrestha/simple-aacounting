@@ -1,12 +1,14 @@
 
-
-<table style="width:60%">
+<h1>Balance:<%= @balance%></h1>
+<h1>Debt:<%= @debt%></h1>
+<h1>Total:<%= @total%></h1>
+<table class ="table">
   <tr>
     <th>Data</th>
     <th>Title</th>
     <th>Amount</th>
-    <th></th>
-    <th></th>
+    <th>Edit</th>
+    <th>Delete</th>
   </tr>
 
   <% @sims.each do |sim| %>
